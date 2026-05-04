@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HEMMEQ – Coming Soon</title>
+  <style>
+    :root {
+      --gold: #b8912d;
+      --black: #111111;
+      --white: #f8f6f0;
+      --muted: #6f6a5f;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: Arial, Helvetica, sans-serif;
+      background: radial-gradient(circle at top, #ffffff 0%, var(--white) 55%, #eee7d8 100%);
+      color: var(--black);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .page {
+      width: 100%;
+      max-width: 1100px;
+      min-height: 680px;
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid rgba(184, 145, 45, 0.22);
+      border-radius: 28px;
+      box-shadow: 0 32px 90px rgba(17, 17, 17, 0.08);
+      padding: 36px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      font-size: 18px;
+    }
+
+    .brand img {
+      width: 44px;
+      height: 44px;
+      object-fit: contain;
+    }
+
+    nav {
+      display: flex;
+      gap: 28px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    nav a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      align-items: center;
+      gap: 56px;
+      padding: 80px 16px;
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+
+    h1 {
+      font-size: clamp(48px, 8vw, 92px);
+      line-height: 0.92;
+      letter-spacing: -0.06em;
+      margin-bottom: 28px;
+    }
+
+    .subline {
+      max-width: 560px;
+      color: var(--muted);
+      font-size: 20px;
+      line-height: 1.55;
+      margin-bottom: 36px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 50px;
+      padding: 0 22px;
+      border-radius: 999px;
+      background: var(--black);
+      color: white;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .button.secondary {
+      background: transparent;
+      color: var(--black);
+      border: 1px solid rgba(17, 17, 17, 0.16);
+    }
+
+    .logo-stage {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 380px;
+      border-radius: 36px;
+      background: linear-gradient(145deg, rgba(184,145,45,0.13), rgba(255,255,255,0.65));
+      border: 1px solid rgba(184, 145, 45, 0.2);
+    }
+
+    .logo-stage img {
+      width: min(260px, 70%);
+      height: auto;
+      filter: drop-shadow(0 24px 30px rgba(184, 145, 45, 0.16));
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      color: var(--muted);
+      font-size: 13px;
+      border-top: 1px solid rgba(17, 17, 17, 0.08);
+      padding-top: 22px;
+    }
+
+    @media (max-width: 820px) {
+      .page {
+        padding: 24px;
+        min-height: auto;
+      }
+
+      nav {
+        display: none;
+      }
+
+      main {
+        grid-template-columns: 1fr;
+        padding: 56px 0;
+      }
+
+      .logo-stage {
+        min-height: 260px;
+        order: -1;
+      }
+
+      footer {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="brand">
+        <!-- Logo-Datei in denselben Ordner legen und als logo.jpg / logo.png benennen -->
+        <img src="logo.jpg" alt="HEMMEQ Logo" />
+        <span>HEMMEQ</span>
+      </div>
+      <nav>
+        <a href="#vision">Vision</a>
+        <a href="#about">Über uns</a>
+        <a href="mailto:hello@hemmeq.com">Kontakt</a>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <div class="eyebrow">Launching soon</div>
+        <h1>Build with clarity. Lead with fire.</h1>
+        <p class="subline">
+          HEMMEQ ist ein zukünftiges Unternehmen für ambitionierte Projekte, klare Entscheidungen und langfristige Wertschöpfung.
+        </p>
+        <div class="actions">
+          <a class="button" href="mailto:hello@hemmeq.com">Kontakt aufnehmen</a>
+          <a class="button secondary" href="#vision">Mehr erfahren</a>
+        </div>
+      </section>
+
+      <section class="logo-stage" aria-label="HEMMEQ Logo">
+        <img src="logo.jpg" alt="Goldene Fackel als HEMMEQ Logo" />
+      </section>
+    </main>
+
+    <footer>
+      <span>© 2025 HEMMEQ. All rights reserved.</span>
+      <span>Strategic ventures · Investments · Execution</span>
+    </footer>
+  </div>
+</body>
+</html>
